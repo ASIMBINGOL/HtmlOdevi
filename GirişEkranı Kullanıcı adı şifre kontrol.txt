@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Giriş Sayfası</title>
+  </head>
+  <body>
+    <h1>Giriş Yap</h1>
+    <form action="giris_kontrol.php" method="post">
+      <label for="kullaniciadi">Kullanıcı Adı:</label>
+      <input type="text" id="kullaniciadi" name="kullaniciadi"><br><br>
+      <label for="sifre">Şifre:</label>
+      <input type="password" id="sifre" name="sifre"><br><br>
+      <input type="submit" value="Giriş Yap">
+    </form>
+  </body>
+</html>
