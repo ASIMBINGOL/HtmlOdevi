@@ -1,0 +1,17 @@
+<section id="about-me" class="bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-lg-2">
+        <img src="Fotoğrafım" alt="ismim" class="img-fluid">
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="p-5">
+          <h2 class="display-4">Ben Kimim?</h2>
+          <p>kendimi tanıttığım bölüm</p>
+          <p>kendimi tanıttığım bölüm</p>
+          <a href="#" class="btn btn-primary btn-lg">Daha Fazla</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
