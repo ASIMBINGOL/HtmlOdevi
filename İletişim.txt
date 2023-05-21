@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erzincan Ve Ben</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <style>
+    *{
+        margin-left: 3px;
+    }
+ </style>
+
+   <script>
+       function validateForm() {
+         var ad = document.forms["myForm"]["ad"].value;
+         
+         if (ad == "") {
+           alert("Lütfen adınızı girin.");
+           return false;
+         }
+       }
+   </script>
+
+   <script >
+
+    function mailKontrol()
+    {
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var email = document.getElementById("email").value;
+    if(reg.test(email) == false) 
+        {
+          alert('Lütfen E-mailinizi kontrol edin.');
+          return false;
+        }
+   
+    }
+    </script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./HTML_PROJE_SİTE.html">Erzincan Ve Ben</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="./HTML_PROJE_SİTE.html">Ana Sayfa</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./HTML_PROJE_HAKKINDA.html">Hakkında</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./HTML_PROJE_ŞEHRİM.html">Şehrim</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./HTML_PROJE_İLGİALAN.html">İlgi Alanlarım</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./HTML_PROJE_ÖZGEÇMİŞ.html">Öz Geçmiş</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./HTML_PROJE_TAKIMIMIZ.html">Takımımız</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./HTML_PROJE_İLETİŞİM.html">İletişim</a>
+                </li>
+              </ul>
+          </div>
+      </nav>
+      <form name="myForm" onsubmit="return validateForm()"action="FormVeri.html" method="GET">
+        <label for="ad">Ad:</label>
+        <input type="text" id="ad" name="ad"placeholder="Adınız" ><br><br>
+        <label for="email">E-posta Adresiniz:</label>
+        <input type="text" id="email" name="email" placeholder="E-mailiniz"><br><br>
+        <label for="cinsiyet">Cinsiyet:</label>
+        <select id="cinsiyet" name="cinsiyet">
+          <option value="">Seçiniz</option>
+          <option value="erkek">Erkek</option>
+          <option value="kadın">Kadın</option>
+          <option value="diğer">Belirtmek İstemiyorum</option>
+        </select> <br><br>
+        <label for="ogrenci-secenek">Öğrenci misiniz?</label><br>
+        <input type="radio" id="ogrenci" name="ogrenci" value="evet" >
+        <label for="ogrenci">Evet</label>
+        <input type="radio" id="ogrenci" name="ogrenci" value="hayr" >
+        <label for="ogrenci">Hayır</label><br><br>
+        <label for="mesaj">Mesajınız:</label><br>
+        <textarea id="mesaj" name="mesaj" rows="4" cols="30" placeholder="Mesajınız"></textarea><br><br>
+       <a href="./FormVeri.html" target="_blank"><input type="submit" value="Veriyi Göster"></input></a> 
+        <input type="submit" value="Denetle"onclick="mailKontrol()">
+        <input type="reset"value="Temizle">
+      </form>
+</body>      
